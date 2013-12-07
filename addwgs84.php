@@ -8,7 +8,7 @@ foreach($all as $key => $station)
 	{
 		if(isset($all[$key]->position->wgs84) == FALSE)
 		  {
-		  $position = new RT90Position($all[$key]->position->rt90->x, $all[$key]->position->rt90->y);
+		  $position = new RT90Position($all[$key]->position->rt90->y, $all[$key]->position->rt90->x);
 		  $wgs84 = $position->toWGS84();
 		  $all[$key]->position->wgs84 = new stdClass;
 		  $all[$key]->position->wgs84->lat = $wgs84->getLatitude();
