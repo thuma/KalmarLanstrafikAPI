@@ -1,0 +1,3 @@
+[submodule "CoordinateTransformationLibrary"]
+	path = CoordinateTransformationLibrary
+	url = git@github.com:thuma/CoordinateTransformationLibrary.git
