@@ -40,9 +40,6 @@ if(is_file($filename))
 	{
 	foreach($all as $key => $name)
 		{
-		//Do not set if allready sett.
-		if(isset($all[$key]->id)){continue;}
-
 		$url = 'http://193.45.213.123/kalmar/rpajax.aspx?net=KALMAR&lang=se&letters='.urlencode(utf8_decode($name->cleanname));
 		$data = utf8_encode(file_get_contents($url));
 		$stationer = preg_split('/></',$data);
